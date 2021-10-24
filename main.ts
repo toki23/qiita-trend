@@ -15,6 +15,7 @@ const titleAndURLs = trend.map((article) => {
 const selectedArticleURL: string = await Select.prompt({
   message: "記事の一覧",
   options: titleAndURLs,
+  maxRows:100,
 });
 
 await open(selectedArticleURL);
